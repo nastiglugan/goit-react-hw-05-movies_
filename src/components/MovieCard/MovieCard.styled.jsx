@@ -30,3 +30,7 @@ export const MovieCardLink = styled(NavLink)`
   color: black;
   text-transform: uppercase;
 `;
+
+export const ButtonBack = styled(NavLink)`
+  border: 1px solid red;
+`;

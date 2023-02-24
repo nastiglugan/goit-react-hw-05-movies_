@@ -5,16 +5,22 @@ import {
   MovieCardOverview,
   MovieCardLinkWrap,
   MovieCardLink,
+  ButtonBack,
 } from './MovieCard.styled';
 
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { useRef } from 'react';
 
 export const MovieCard = ({ details }) => {
+  const location = useLocation();
+  const locRef = useRef(location.state?.from ?? '/movies');
+
   const { poster_path, title, vote_average, overview, genres, runtime } =
     details;
 
   return (
     <div>
+      <ButtonBack to={locRef.current}>Back to movies</ButtonBack>
       <MovieCardWrap>
         <div>
           <img

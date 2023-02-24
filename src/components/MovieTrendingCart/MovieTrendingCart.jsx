@@ -7,6 +7,7 @@ import {
   MovieTrendingVote,
   MovieTrendingTitle,
 } from './MovieTrendingCart.styled';
+import { useLocation } from 'react-router-dom';
 
 export const MovieTrendingCard = ({ movie }) => {
   const { poster_path, id, title, vote_average } = movie;

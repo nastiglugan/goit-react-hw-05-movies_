@@ -21,14 +21,24 @@ export const MovieCard = ({ details }) => {
   return (
     <div>
       <ButtonBack to={locRef.current}>Back to movies</ButtonBack>
+
       <MovieCardWrap>
         <div>
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-            alt={title}
-            width="470"
-            height="600"
-          />
+          {poster_path !== null ? (
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+              alt={title}
+              width="470"
+              height="600"
+            />
+          ) : (
+            <img
+              src="https://fomantic-ui.com/images/wireframe/image.png"
+              alt={title}
+              width="470"
+              height="600"
+            />
+          )}
         </div>
         <div>
           <MovieCardTitle> {title}</MovieCardTitle>

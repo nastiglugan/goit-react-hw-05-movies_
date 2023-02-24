@@ -6,6 +6,7 @@ export const MovieCardWrap = styled.div`
   gap: 25px;
   font-size: 26px;
   margin-bottom: 50px;
+  margin-top: 35px;
 `;
 
 export const MovieCardTitle = styled.h3`
@@ -32,5 +33,9 @@ export const MovieCardLink = styled(NavLink)`
 `;
 
 export const ButtonBack = styled(NavLink)`
-  border: 1px solid red;
+  border-radius: 7px;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #4d994da0;
+  color: white;
 `;

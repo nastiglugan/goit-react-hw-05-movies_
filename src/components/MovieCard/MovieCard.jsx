@@ -3,9 +3,11 @@ import {
   MovieCardTitle,
   MovieCardVote,
   MovieCardOverview,
+  MovieCardLinkWrap,
+  MovieCardLink,
 } from './MovieCard.styled';
 
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 export const MovieCard = ({ details }) => {
   const { poster_path, title, vote_average, overview, genres, runtime } =
@@ -13,7 +15,6 @@ export const MovieCard = ({ details }) => {
 
   return (
     <div>
-      {' '}
       <MovieCardWrap>
         <div>
           <img
@@ -36,10 +37,10 @@ export const MovieCard = ({ details }) => {
           <p>Runtime: {runtime} min</p>
         </div>
       </MovieCardWrap>
-      <div>
-        <NavLink to="cast">Cast</NavLink>
-        <NavLink to="reviews">Reviews</NavLink>
-      </div>
+      <MovieCardLinkWrap>
+        <MovieCardLink to="cast">Cast</MovieCardLink>
+        <MovieCardLink to="reviews">Reviews</MovieCardLink>
+      </MovieCardLinkWrap>
       <Outlet />
     </div>
   );

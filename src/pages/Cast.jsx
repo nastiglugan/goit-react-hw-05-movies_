@@ -9,11 +9,7 @@ export const Cast = () => {
 
   useEffect(() => {
     getCredits.fetchCredits(movieId).then(data => setActors(data));
-  });
+  }, [movieId]);
 
-  return (
-    <div>
-      <CastList actors={actors}></CastList>
-    </div>
-  );
+  return <div>{actors !== null && <CastList actors={actors}></CastList>}</div>;
 };

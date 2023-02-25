@@ -1,6 +1,7 @@
 // import { NavLink } from 'react-router-dom';
 import { MovieTrendingCard } from '../MovieTrendingCart/MovieTrendingCart';
 import { MovieTrendingList } from './MovieList.styled';
+import PropTypes from 'prop-types';
 
 export const MoviesList = ({ movies }) => {
   return (
@@ -16,4 +17,8 @@ export const MoviesList = ({ movies }) => {
       </MovieTrendingList>
     </div>
   );
+};
+
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

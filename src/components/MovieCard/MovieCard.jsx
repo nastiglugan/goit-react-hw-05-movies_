@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   MovieCardWrap,
   MovieCardTitle,
@@ -60,4 +61,8 @@ export const MovieCard = ({ details }) => {
       <Outlet />
     </div>
   );
+};
+
+MovieCard.propTypes = {
+  details: PropTypes.object.isRequired,
 };

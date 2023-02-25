@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import { CardListWrap, CardListItem, CardListImg } from './CastList.styled';
+
 export const CastList = ({ actors }) => {
   const { cast } = actors;
   return (
@@ -16,6 +18,7 @@ export const CastList = ({ actors }) => {
             ) : (
               <CardListImg
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/1084px-Unknown_person.jpg"
+                // src="../../img/Unknown_person.jpg"
                 alt={actor.name}
                 width="160"
                 height="200"
@@ -28,4 +31,8 @@ export const CastList = ({ actors }) => {
       })}
     </CardListWrap>
   );
+};
+
+CastList.propTypes = {
+  actors: PropTypes.object.isRequired,
 };

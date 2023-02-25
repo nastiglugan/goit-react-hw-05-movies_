@@ -3,7 +3,7 @@ import * as getCredits from '../components/api';
 import { useParams } from 'react-router-dom';
 import { CastList } from '../components/CastList/CastList';
 
-export const Cast = () => {
+const Cast = () => {
   const [actors, setActors] = useState(null);
   const { movieId } = useParams();
 
@@ -13,3 +13,5 @@ export const Cast = () => {
 
   return <div>{actors !== null && <CastList actors={actors}></CastList>}</div>;
 };
+
+export default Cast;

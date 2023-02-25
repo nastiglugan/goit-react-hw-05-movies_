@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { MoviesList } from 'components/MovieList/MovieList';
 import { MovieListTitle } from '../components/MovieList/MovieList.styled';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -17,3 +17,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

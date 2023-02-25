@@ -8,6 +8,7 @@ import {
   MovieTrendingTitle,
 } from './MovieTrendingCart.styled';
 import { useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const MovieTrendingCard = ({ movie }) => {
   const location = useLocation();
@@ -43,4 +44,8 @@ export const MovieTrendingCard = ({ movie }) => {
       </MovieTrendingItems>
     </MovieTrendingCover>
   );
+};
+
+MovieTrendingCard.propTypes = {
+  movie: PropTypes.object.isRequired,
 };

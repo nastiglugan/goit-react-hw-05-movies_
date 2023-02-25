@@ -6,7 +6,7 @@ export const CardListWrap = styled.ul`
   font-size: 26px;
   flex-wrap: wrap;
   list-style: none;
-  margin-top: 50px;
+  margin-top: 30px;
 `;
 
 export const CardListItem = styled.li`

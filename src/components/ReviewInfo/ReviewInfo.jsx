@@ -1,8 +1,6 @@
-import { NoReviews } from './ReviewInfo.styled';
 import PropTypes from 'prop-types';
 
-export const ReviewInfo = ({ info }) => {
-  const { results } = info;
+export const ReviewInfo = ({ results }) => {
   return (
     <div>
       <ul>
@@ -15,13 +13,10 @@ export const ReviewInfo = ({ info }) => {
           );
         })}
       </ul>
-      {results.length === 0 && (
-        <NoReviews>This movie hasn't reviews yet</NoReviews>
-      )}
     </div>
   );
 };
 
 ReviewInfo.propTypes = {
-  info: PropTypes.object.isRequired,
+  info: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

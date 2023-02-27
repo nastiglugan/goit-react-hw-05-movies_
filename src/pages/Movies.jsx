@@ -12,22 +12,8 @@ const Movies = () => {
   const [fetchMovies, setFetchMovies] = useSearchParams();
   const nameFilm = fetchMovies.get('name') || '';
 
-  // const forFormSubmit = name => {
-  //   setMovieName(name);
-  //   console.log(movieName);
-  // };
-
-  const forFormSubmit = e => {
-    e.preventDefault();
-    setMovieName([]);
-    setError(null);
-    const form = e.target;
-    const searchQuery = form.searchName.value;
-    if (searchQuery === '') {
-      alert('Введіть текст у пошук!');
-      return;
-    }
-    setFetchMovies({ name: searchQuery });
+  const forFormSubmit = name => {
+    setFetchMovies({ name: name });
   };
 
   useEffect(() => {

@@ -18,28 +18,17 @@ export const MovieCard = ({ details }) => {
 
   const { poster_path, title, vote_average, overview, genres, runtime } =
     details;
-
+  const srcImg =
+    poster_path !== null
+      ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+      : 'https://fomantic-ui.com/images/wireframe/image.png';
   return (
     <div>
       <ButtonBack to={locRef.current}>Back to movies</ButtonBack>
 
       <MovieCardWrap>
         <div>
-          {poster_path !== null ? (
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-              alt={title}
-              width="470"
-              height="600"
-            />
-          ) : (
-            <img
-              src="https://fomantic-ui.com/images/wireframe/image.png"
-              alt={title}
-              width="470"
-              height="600"
-            />
-          )}
+          <img src={srcImg} alt={title} width="470" height="600" />
         </div>
         <div>
           <MovieCardTitle> {title}</MovieCardTitle>
